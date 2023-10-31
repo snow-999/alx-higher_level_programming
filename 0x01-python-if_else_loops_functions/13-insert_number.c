@@ -1,8 +1,8 @@
 #include "lists.h"
-#include <strdlib.h>
+#include <stdlib.h>
 /**
  * insert_node - insetr a node
- * @head: firat node
+ * @head: first node
  * @number: number will be given to insetr
  * Return: node , NULL
  *
@@ -10,25 +10,25 @@
 */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *Onode = *head, Nnode = malloc(sizeof(listint_t));
+	listint_t *Onode = *head, *Nnode = malloc(sizeof(listint_t));
 
 	if (!Nnode)
 	{
 		return (NULL);
 	}
-	Nnew->n = number;
-	Nnew->next = NULL;
-	if (!Onode || new->n < Onode->n)
+	Nnode->n = number;
+	Nnode->next = NULL;
+	if (!Onode || Nnode->n < Onode->n)
 	{
-		Nnew->next = Onode;
-		return (*head = Nnew);
+		Nnode->next = Onode;
+		return (*head = Nnode);
 	}
 	while (Onode)
 	{
-		if (!Omode->next || Nnew->n < Onode->next->n)
+		if (!Onode->next || Nnode->n < Onode->next->n)
 		{
-			Nnew->next = Onode->next;
-			Onode->next = Nnew;
+			Nnode->next = Onode->next;
+			Onode->next = Nnode;
 			return (Onode);
 		}
 		Onode = Onode->next;
