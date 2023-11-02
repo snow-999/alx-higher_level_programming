@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    arc = len(sys.argv) -1
+    arc = len(sys.argv) - 1
     if arc == 0:
         print("0 arguments.")
     elif arc == 1:
