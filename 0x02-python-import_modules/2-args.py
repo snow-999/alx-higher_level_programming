@@ -7,6 +7,6 @@ if __name__ == "__main__":
     elif arc == 1:
         print("1 argument:")
     else:
-        print("{:d} arguments:")
+        print("{:d} arguments:".format(arc))
     for i in range(arc):
         print("{:d}: {}".format(i + 1, sys.argv[i + 1]))
