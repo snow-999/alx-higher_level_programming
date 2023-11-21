@@ -25,12 +25,12 @@ class Square:
 
     def area(self):
         """get the erea of sqare"""
-        return self.__size * self.__size 
+        return self.__size * self.__size
 
     def my_print(self):
         for i in range(self.size):
             for x in range(self.size):
-                if x == self.size -1 and i != x:
+                if x == self.size - 1 and i != x:
                     print("#")
                 else:
                     print("#", end="")
