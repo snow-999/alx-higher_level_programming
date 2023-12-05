@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     """read file function"""
-    with open(filename, encoding="uft-8") as f:
-        print(f.read(), end="")
+    with open(filename, "r") as new:
+        print(new.read(), end="")
