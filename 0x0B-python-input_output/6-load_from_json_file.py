@@ -7,5 +7,5 @@ import json
 
 def load_from_json_file(filename):
     """creat an json file"""
-    with open(filename, "w") as new:
+    with open(filename, "r") as new:
         return json.load(new)
