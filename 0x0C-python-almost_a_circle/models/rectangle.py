@@ -20,7 +20,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """set the value of width"""
-        self.validation_int("width", value)
+        self.validation_int("width", value, False)
         self.__width = value
 
     @property
@@ -31,7 +31,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """set the vlaue of the height"""
-        self.validation_int("height", value)
+        self.validation_int("height", value, False)
         self.__height = value
 
     @property
@@ -61,9 +61,9 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError(f"{name} must be an integer")
         if quality and value < 0:
-            raise ValueError(f"{name} must be > 0")
-        elif not quality and value <= 0:
             raise ValueError(f"{name} must be >= 0")
+        elif not quality and value <= 0:
+            raise ValueError(f"{name} must be > 0")
 
     def area(self):
         """get the erea of the rectangle"""
