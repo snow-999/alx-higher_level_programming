@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""almost circle task"""
+"""rectangle class"""
 
 
-from Base import Base
+from models.Base import Base
 
 
 class Rectangle(Base):
@@ -73,8 +73,8 @@ class Rectangle(Base):
 
     def display(self):
         """print # as rectangle"""
-        dis_str = "\n" * self.y \
-            + (" " * self.x + "#" * self.width + "\n") * self.height
+        dis_str = "\n" * self.y +\
+            (" " * self.x + "#" * self.width + "\n") * self.height
         print(dis_str, end=" ")
 
     def __str__(self):
@@ -101,3 +101,8 @@ class Rectangle(Base):
             self.__update(*args)
         else:
             self.__update(**kwargs)
+
+    def to_dictionary(self):
+        """retturn repersentaion"""
+        return {"id": self.id, "width": self.width,
+                "height": self.height, "x": self.x, "y": self.y}
