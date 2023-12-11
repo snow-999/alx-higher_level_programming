@@ -71,9 +71,9 @@ class Rectangle(Base):
 
     def display(self):
         """print # as rectangle"""
-        dis_str = "\n" * self.y +\
+        dis_str = "\n" * self.y + \
             (" " * self.x + "#" * self.width + "\n") * self.height
-        print(dis_str, end=" ")
+        print(dis_str, end="")
 
     def __str__(self):
         """print for user view"""
