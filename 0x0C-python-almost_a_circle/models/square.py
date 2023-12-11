@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """ square class"""
-
-
 from models.rectangle import Rectangle
 
 
